@@ -7,10 +7,10 @@
 
 body {
     font-family: 'Roboto', sans-serif;
-    background-image: url('background.jpg');
-    background-size: cover;
-    background-position: center;
-    background-attachment: fixed;
+    background-image: url('images/background.jpg'); /* Hintergrundbild */
+    background-size: cover;  /* Bild füllt den Bildschirm */
+    background-position: center; /* Bild bleibt zentriert */
+    background-attachment: fixed;  /* Bild bleibt fixiert, wenn man scrollt */
     color: white;
 }
 
