@@ -81,7 +81,7 @@ main {
 
 /* Sektionen mit transparentem Hintergrund */
 section {
-    background-color: rgba(255, 255, 255, 0.8);  /* Weiß mit 80% Transparenz */
+    background-color: rgba(255, 255, 255, 0.6);  /* Weiß mit 60% Transparenz */
     padding: 20px;
     border-radius: 8px;
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
@@ -94,6 +94,7 @@ section p, section h2 {
     padding: 15px;
     border-radius: 5px;
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    color: #333333; /* Dunkler Text für besseren Kontrast auf weißem Hintergrund */
 }
 
 /* Dynamische Effekte mit Scroll */
