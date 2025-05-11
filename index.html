@@ -28,5 +28,17 @@
         <h1>Willkommen bei ARTn'Vielfalt</h1>
         <p>Erlebe unsere neueste Aufführung: <strong>GRIMM! Die Geschichte von Rotkäppchen und ihrem Wolf</strong>.</p>
     </main>
+<script>
+    // Scroll-Effekte aktivieren
+    window.addEventListener('scroll', function () {
+        const elements = document.querySelectorAll('.scroll-effect');
+        elements.forEach(function (element) {
+            const position = element.getBoundingClientRect().top;
+            if (position < window.innerHeight) {
+                element.classList.add('visible');
+            }
+        });
+    });
+</script>
 </body>
 </html>
