@@ -53,26 +53,47 @@ main {
     margin-right: auto;
 }
 
-/* Button-Design */
+/* Formular-Design */
+form {
+    margin-top: 20px;
+}
+
+input[type="email"] {
+    width: 100%;
+    padding: 15px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1em;
+}
+
 button {
     background-color: #B22222;
     color: white;
     border: none;
-    padding: 10px 20px;
+    padding: 12px 25px;
     border-radius: 5px;
     cursor: pointer;
-    font-size: 1em;
-    margin-top: 20px;
+    font-size: 1.1em;
+    margin-top: 10px;
 }
 
 button:hover {
     background-color: #a51e1e;
 }
 
-input[type="email"] {
-    width: 100%;
-    padding: 10px;
-    margin-bottom: 15px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
+/* Datenschutzerklärung */
+.privacy {
+    margin-top: 15px;
+    font-size: 0.9em;
+    color: #dddddd;
+}
+
+.privacy a {
+    color: #ffcccc;
+    text-decoration: none;
+}
+
+.privacy a:hover {
+    text-decoration: underline;
 }
