@@ -5,9 +5,9 @@ body {
     background-image: url('images/background.jpg');
     background-size: cover;
     background-position: center;
+    background-attachment: fixed;
     color: #ffffff;
 }
-
 header {
     background-color: rgba(178, 34, 34, 0.8); /* Rotkäppchen-Rot mit Transparenz */
     color: white;
