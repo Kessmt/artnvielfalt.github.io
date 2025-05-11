@@ -22,11 +22,13 @@ header {
     font-family: 'Cinzel', serif; /* Märchenhafte Schriftart für Header */
     position: relative;
     z-index: 1;
+    transition: none; /* Übergangseffekte deaktivieren */
 }
 
 header img.logo {
     height: 50px; /* Passen Sie dies an, um das Logo kleiner zu machen */
     margin-bottom: 10px;
+    transition: none; /* Keine Übergangseffekte auf das Logo */
 }
 
 header h1 {
@@ -50,6 +52,7 @@ nav ul {
     display: flex;
     justify-content: center;
     gap: 20px;
+    align-items: center; /* Verhindert das Verschieben von Elementen */
 }
 
 /* Menü-Links */
