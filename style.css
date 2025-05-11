@@ -2,9 +2,9 @@
 body {
     font-family: 'Roboto', sans-serif; /* Hauptschriftart */
     background-image: url('images/background.jpg'); /* Hintergrundbild */
-    background-size: cover;  /* Bild füllt den Bildschirm */
-    background-position: center; /* Bild bleibt zentriert */
-    background-attachment: fixed;  /* Bild bleibt fixiert beim Scrollen */
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
     color: white;
     margin: 0;
     padding: 0;
@@ -12,27 +12,30 @@ body {
 
 /* Header */
 header {
-    background-color: rgba(178, 34, 34, 0.7);  /* Transparentes Rot für den Header */
+    background-image: url('images/header-background.jpg'); /* Transparentes Hintergrundbild */
+    background-size: cover; /* Bild füllt den Bereich */
+    background-position: center;
+    background-attachment: fixed;
     color: white;
-    padding: 20px 0;
+    padding: 100px 0;
     text-align: center;
-    font-family: 'Oswald', sans-serif; /* Schriftart für den Header */
-}
-
-header img.logo {
-    height: 70px;
-    margin-bottom: 15px;
+    font-family: 'Cinzel', serif; /* Märchenhafte Schriftart für Header */
+    position: relative;
+    z-index: 1;
 }
 
 header h1 {
-    font-size: 3rem;
-    color: #FF6347;  /* Tomatenrot */
+    font-size: 4rem;
     margin: 20px 0;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.4); /* Schattierung für den Text */
+    color: #FF6347; /* Tomatenrot für den Text */
+    letter-spacing: 3px; /* Etwas mehr Abstand zwischen den Buchstaben */
 }
 
 header p {
-    font-size: 1.2rem;
+    font-size: 1.5rem;
     color: #FFDDC1; /* Helles Rot für den Text */
+    margin-top: 10px;
 }
 
 /* Navigation */
@@ -42,18 +45,23 @@ nav ul {
     display: flex;
     justify-content: center;
     gap: 30px;
+    margin-top: 30px;
+    position: relative;
+    z-index: 2;
 }
 
 nav ul li a {
     color: white;
     text-decoration: none;
     font-size: 1.1rem;
+    font-family: 'Roboto', sans-serif; /* Moderne Schriftart für die Navigation */
     text-transform: uppercase;
     font-weight: 500;
+    transition: color 0.3s ease;
 }
 
 nav ul li a:hover {
-    text-decoration: underline;
+    color: #FF6347; /* Hover Effekt mit der gleichen Farbe wie der Header */
 }
 
 /* Main Content */
@@ -61,6 +69,18 @@ main {
     padding: 50px 20px;
     max-width: 1000px;
     margin: auto;
+}
+
+/* Dynamische Effekte mit Scroll */
+.scroll-effect {
+    opacity: 0;
+    transform: translateY(50px);
+    transition: opacity 1s ease, transform 1s ease;
+}
+
+.scroll-effect.visible {
+    opacity: 1;
+    transform: translateY(0);
 }
 
 /* Call to Action (CTA) Section */
@@ -73,7 +93,7 @@ main {
 }
 
 .cta h2 {
-    font-family: 'Oswald', sans-serif;
+    font-family: 'Cinzel', serif;
     font-size: 2.5rem;
     color: #FF6347;
 }
@@ -99,58 +119,6 @@ main {
 .cta a:hover {
     background-color: #ff4500;
     transform: translateY(-5px);
-}
-
-/* Section Styles */
-section {
-    margin-bottom: 40px;
-    padding: 20px;
-    background-color: #ffffff;
-    border-radius: 8px;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-}
-
-h2 {
-    font-family: 'Oswald', sans-serif;
-    font-size: 2rem;
-    color: #333333;
-    margin-bottom: 15px;
-}
-
-p {
-    font-size: 1.2rem;
-    line-height: 1.6;
-    margin-bottom: 20px;
-    color: #333333;
-}
-
-/* Event List */
-.event-list, .team-list {
-    display: grid;
-    gap: 20px;
-}
-
-.event-item, .team-member {
-    padding: 15px;
-    border: 1px solid #eaeaea;
-    border-radius: 5px;
-    background-color: #fafafa;
-}
-
-button {
-    background-color: #FF6347;
-    color: white;
-    padding: 12px 20px;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    font-size: 1.1rem;
-    margin-top: 20px;
-    transition: background-color 0.3s ease;
-}
-
-button:hover {
-    background-color: #a51f1f;
 }
 
 /* Footer */
