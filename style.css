@@ -25,7 +25,7 @@ header {
 }
 
 header img.logo {
-    height: 80px; /* Passen Sie dies an, um das Logo kleiner zu machen */
+    height: 50px; /* Passen Sie dies an, um das Logo kleiner zu machen */
     margin-bottom: 10px;
 }
 
