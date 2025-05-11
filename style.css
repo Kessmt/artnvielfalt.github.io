@@ -2,17 +2,23 @@
 body {
     font-family: Arial, sans-serif;
     margin: 0;
-    background-color: #fdf6f0;
-    color: #333333;
+    background-image: url('images/dein-hintergrundbild.jpg');
+    background-size: cover;   /* Hintergrundbild skaliert */
+    background-position: center;
+    background-attachment: fixed;   /* Hintergrund bleibt beim Scrollen */
+    background-color: rgba(255, 255, 255, 0);  /* Transparente Überlagerung */
+    color: #333;
 }
 
+/* Header */
 header {
-    background-color: #b22222;
+    background-color: rgba(178, 34, 34, 0.8);  /* Transparentes Rot für den Header */
     color: white;
     padding: 15px 0;
     text-align: center;
 }
 
+/* Header-Logo */
 header img.logo {
     height: 50px;
     margin-bottom: 10px;
