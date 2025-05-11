@@ -1,35 +1,29 @@
-/* Grunddesign */
+""/* Allgemeine Stile */
 body {
     font-family: Arial, sans-serif;
     margin: 0;
-    background-image: url('images/background.jpg');
-    background-size: cover;
-    background-position: center;
-    background-attachment: fixed;
-    color: #ffffff;
+    background-color: #fdf6f0;
+    color: #333333;
 }
+
 header {
-    background-color: rgba(178, 34, 34, 0.8); /* Rotkäppchen-Rot mit Transparenz */
+    background-color: #b22222;
     color: white;
     padding: 15px 0;
+    text-align: center;
 }
 
-.header-container {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    width: 90%;
-    margin: 0 auto;
-}
-
-.logo {
+header img.logo {
     height: 50px;
+    margin-bottom: 10px;
 }
 
 nav ul {
-    list-style: none;
+    list-style-type: none;
+    padding: 0;
     display: flex;
-    gap: 15px;
+    justify-content: center;
+    gap: 20px;
 }
 
 nav ul li a {
@@ -42,36 +36,52 @@ nav ul li a:hover {
     text-decoration: underline;
 }
 
+/* Main Content */
 main {
-    text-align: center;
-    margin-top: 100px;
-    background-color: rgba(0, 0, 0, 0.5);
+    padding: 40px 20px;
+    max-width: 1000px;
+    margin: auto;
+}
+
+section {
+    margin-bottom: 40px;
     padding: 20px;
-    border-radius: 10px;
-    max-width: 600px;
-    margin-left: auto;
-    margin-right: auto;
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
 }
 
-/* Formular-Design */
-form {
-    margin-top: 20px;
+h1 {
+    color: #b22222;
+    margin-bottom: 10px;
 }
 
-input[type="email"] {
-    width: 100%;
-    padding: 15px;
+h2 {
+    color: #333333;
+    margin-bottom: 5px;
+}
+
+p {
     margin-bottom: 15px;
-    border: 1px solid #ccc;
+}
+
+.event-list, .team-list {
+    display: grid;
+    gap: 20px;
+}
+
+.event-item, .team-member {
+    padding: 15px;
+    border: 1px solid #eaeaea;
     border-radius: 5px;
-    font-size: 1em;
+    background-color: #fafafa;
 }
 
 button {
-    background-color: #B22222;
+    background-color: #b22222;
     color: white;
+    padding: 10px 20px;
     border: none;
-    padding: 12px 25px;
     border-radius: 5px;
     cursor: pointer;
     font-size: 1.1em;
@@ -79,21 +89,19 @@ button {
 }
 
 button:hover {
-    background-color: #a51e1e;
+    background-color: #a51f1f;
 }
 
-/* Datenschutzerklärung */
-.privacy {
-    margin-top: 15px;
-    font-size: 0.9em;
-    color: #dddddd;
+/* Footer */
+footer {
+    background-color: #333333;
+    color: white;
+    text-align: center;
+    padding: 15px;
+    margin-top: 40px;
 }
 
-.privacy a {
-    color: #ffcccc;
-    text-decoration: none;
+footer p {
+    margin: 0;
 }
-
-.privacy a:hover {
-    text-decoration: underline;
-}
+""
