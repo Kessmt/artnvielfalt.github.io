@@ -49,26 +49,25 @@ nav ul {
     padding: 0;
     display: flex;
     justify-content: center;
-    gap: 30px;
-    margin-top: 30px;
-    position: relative;
-    z-index: 2;
+    gap: 20px;
 }
 
+/* Menü-Links */
 nav ul li a {
     color: white;
     text-decoration: none;
-    font-size: 1.1rem;
-    font-family: 'Roboto', sans-serif; /* Moderne Schriftart für die Navigation */
-    text-transform: uppercase;
-    font-weight: 500;
-    transition: color 0.3s ease;
+    font-size: 1.1em;
+    padding: 10px 15px;
+    background-color: rgba(178, 34, 34, 0.7); /* Transparenter roter Hintergrund */
+    border-radius: 5px;
+    transition: background-color 0.3s ease; /* Sanfter Übergang beim Hover */
 }
 
+/* Hover-Effekt */
 nav ul li a:hover {
-    color: #FF6347; /* Hover Effekt mit der gleichen Farbe wie der Header */
+    background-color: rgba(178, 34, 34, 1); /* Stärkerer Rotton beim Hover */
+    text-decoration: underline;
 }
-
 /* Main Content */
 main {
     padding: 50px 20px;
