@@ -8,6 +8,7 @@ body {
     color: white;
     margin: 0;
     padding: 0;
+    scroll-behavior: smooth; /* Sanftes Scrollen */
 }
 
 /* Sticky Header */
@@ -27,7 +28,7 @@ header {
 
 /* Höhe der Navigationsleiste für Platzhalter (genau wie Header) */
 .header-space {
-    height: 80px; /* Höhe passend zum Header */
+    height: 80px; /* gleiche Höhe wie der Header */
 }
 
 header img.logo {
@@ -61,11 +62,6 @@ nav ul li a:hover {
     text-decoration: underline;
 }
 
-/* Platzhalter für den Sticky Header (verhindert Überlappen) */
-.header-space {
-    height: 80px; /* gleiche Höhe wie der Header */
-}
-
 /* Main Content */
 main {
     padding: 50px 20px;
@@ -81,6 +77,7 @@ section {
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
     margin-bottom: 40px;
     color: #333;
+    scroll-margin-top: 90px; /* Verhindert Überlappung beim Sprung */
 }
 
 /* Animation beim Scrollen */
