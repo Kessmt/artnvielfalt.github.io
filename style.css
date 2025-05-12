@@ -8,6 +8,7 @@ body {
     color: white;
     margin: 0;
     padding: 0;
+    scroll-behavior: smooth; /* Sanftes Scrollen */
 }
 
 /* Sticky Header */
@@ -25,15 +26,9 @@ header {
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
 }
 
-/* Höhe der Navigationsleiste für Platzhalter */
+/* Platzhalter für Sticky Navigation (verhindert Überlappen) */
 .header-space {
-    height: 80px; /* Höhe passend zum Header */
-}
-
-/* Logo im Header */
-header img.logo {
-    height: 20px; /* Kleinere Logo-Größe */
-    margin-bottom: 5px;
+    height: 100px; /* Höhe des Headers + Abstand */
 }
 
 /* Navigation */
@@ -47,7 +42,6 @@ nav ul {
     margin: 0;
 }
 
-/* Menü-Links */
 nav ul li a {
     color: white;
     text-decoration: none;
@@ -58,35 +52,31 @@ nav ul li a {
     transition: background-color 0.3s ease;
 }
 
-/* Hover-Effekt für Links */
 nav ul li a:hover {
     background-color: rgba(178, 34, 34, 1);
     text-decoration: underline;
 }
 
-/* Hauptinhalt (Main Content) */
+/* Main Content */
 main {
-    padding-top: 80px; /* Platz für die fixe Navigationsleiste */
-    padding-left: 20px;
-    padding-right: 20px;
+    padding: 20px;
     max-width: 1000px;
-    margin: 0 auto; /* Zentriert den Inhalt horizontal */
-    box-sizing: border-box;
+    margin: auto;
 }
 
-/* Sektionen mit transparentem Hintergrund */
+/* Sektionen mit deutlichem Abstand und Kontrast */
 section {
-    background-color: rgba(255, 255, 255, 0.9);
-    padding: 25px;
-    border-radius: 8px;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-    margin-bottom: 40px;
+    background-color: rgba(255, 255, 255, 0.95);
+    padding: 35px;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    margin-bottom: 50px;
     color: #333;
-    width: 100%;
-    box-sizing: border-box;
+    scroll-margin-top: 120px; /* Verhindert Überlappung beim Sprung */
+    border: 2px solid #b22222;
 }
 
-/* Animation bei Scrollen */
+/* Animation beim Scrollen */
 .scroll-effect {
     opacity: 0;
     transform: translateY(50px);
@@ -101,11 +91,14 @@ section {
 /* Titel in den Sektionen */
 section h2 {
     font-family: 'Cinzel', serif;
-    font-size: 2.2rem;
+    font-size: 2.5rem;
     color: #b22222;
     margin-bottom: 15px;
+    border-bottom: 2px solid #b22222;
+    padding-bottom: 10px;
 }
 
+/* Inhaltstexte */
 section p {
     font-size: 1.2rem;
     line-height: 1.8;
@@ -126,15 +119,15 @@ section a:hover {
 
 /* Kontraste für Sektionen erhöhen */
 section#veranstaltungen {
-    background-color: rgba(227, 242, 253, 0.9);
+    background-color: rgba(227, 242, 253, 0.95);
 }
 
 section#team {
-    background-color: rgba(241, 248, 233, 0.9);
+    background-color: rgba(241, 248, 233, 0.95);
 }
 
 section#mitmachen {
-    background-color: rgba(255, 253, 231, 0.9);
+    background-color: rgba(255, 253, 231, 0.95);
 }
 
 /* Call to Action (CTA) Section */
@@ -189,23 +182,10 @@ footer p {
     font-size: 1rem;
 }
 
-/* Verhindert das Überlappen des Inhalts mit der fixierten Navigation */
-header + main {
-    padding-top: 80px; /* Damit der Inhalt unter der Navigation startet */
-}
-
 /* Responsive Design */
 @media (max-width: 768px) {
-    main {
-        padding-top: 120px; /* Mehr Platz für Navigation auf mobilen Geräten */
-    }
-
-    section h2 {
-        font-size: 1.5rem;
-    }
-
-    section p {
-        font-size: 1rem;
+    header h1 {
+        font-size: 2.5rem;
     }
 
     .cta h2 {
@@ -216,12 +196,16 @@ header + main {
         font-size: 1rem;
     }
 
+    h2 {
+        font-size: 1.5rem;
+    }
+
+    p {
+        font-size: 1rem;
+    }
+
     nav ul {
         flex-direction: column;
         gap: 15px;
-    }
-
-    header h1 {
-        font-size: 2.5rem;
     }
 }
