@@ -1,7 +1,7 @@
 /* Allgemeine Stile */
 body {
-    font-family: 'Roboto', sans-serif; /* Hauptschriftart */
-    background-image: url('images/background.jpg'); /* Hintergrundbild */
+    font-family: 'Roboto', sans-serif;
+    background-image: url('images/background.jpg');
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
@@ -10,39 +10,24 @@ body {
     padding: 0;
 }
 
-/* Header */
+/* Sticky Header */
 header {
-    background-image: url('images/header-background.jpg'); /* Transparentes Hintergrundbild */
-    background-size: cover; /* Bild füllt den Bereich */
-    background-position: center;
-    background-attachment: fixed;
+    background-color: rgba(0, 0, 0, 0.8);
     color: white;
-    padding: 100px 0;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    padding: 10px 0;
     text-align: center;
-    font-family: 'Cinzel', serif; /* Märchenhafte Schriftart für Header */
-    position: relative;
-    z-index: 1;
-    transition: none; /* Übergangseffekte deaktivieren */
+    font-family: 'Cinzel', serif;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
 }
 
 header img.logo {
-    height: 100px; /* Passen Sie dies an, um das Logo kleiner zu machen */
-    margin-bottom: 10px;
-    transition: none; /* Keine Übergangseffekte auf das Logo */
-}
-
-header h1 {
-    font-size: 4rem;
-    margin: 20px 0;
-    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.4); /* Schattierung für den Text */
-    color: #FF6347; /* Tomatenrot für den Text */
-    letter-spacing: 3px; /* Etwas mehr Abstand zwischen den Buchstaben */
-}
-
-header p {
-    font-size: 1.5rem;
-    color: #FFDDC1; /* Helles Rot für den Text */
-    margin-top: 10px;
+    height: 60px;
+    margin-bottom: 5px;
 }
 
 /* Navigation */
@@ -51,25 +36,29 @@ nav ul {
     padding: 0;
     display: flex;
     justify-content: center;
-    gap: 20px;
-    align-items: center; /* Verhindert das Verschieben von Elementen */
+    gap: 15px;
+    align-items: center;
+    margin: 0;
 }
 
-/* Menü-Links */
 nav ul li a {
     color: white;
     text-decoration: none;
     font-size: 1.1em;
     padding: 10px 15px;
-    background-color: rgba(178, 34, 34, 0.7); /* Transparenter roter Hintergrund */
+    background-color: rgba(178, 34, 34, 0.7);
     border-radius: 5px;
-    transition: background-color 0.3s ease; /* Sanfter Übergang beim Hover */
+    transition: background-color 0.3s ease;
 }
 
-/* Hover-Effekt */
 nav ul li a:hover {
-    background-color: rgba(178, 34, 34, 1); /* Stärkerer Rotton beim Hover */
+    background-color: rgba(178, 34, 34, 1);
     text-decoration: underline;
+}
+
+/* Platzhalter für den Sticky Header (verhindert Überlappen) */
+.header-space {
+    height: 80px; /* gleiche Höhe wie der Header */
 }
 
 /* Main Content */
@@ -81,14 +70,15 @@ main {
 
 /* Sektionen mit transparentem Hintergrund */
 section {
-    background-color: rgba(255, 255, 255, 0.8);  /* Weiß mit 80% Transparenz */
-    padding: 20px;
+    background-color: rgba(255, 255, 255, 0.9);
+    padding: 25px;
     border-radius: 8px;
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
     margin-bottom: 40px;
+    color: #333;
 }
 
-/* Dynamische Effekte mit Scroll */
+/* Animation beim Scrollen */
 .scroll-effect {
     opacity: 0;
     transform: translateY(50px);
@@ -98,6 +88,45 @@ section {
 .scroll-effect.visible {
     opacity: 1;
     transform: translateY(0);
+}
+
+/* Titel in den Sektionen */
+section h2 {
+    font-family: 'Cinzel', serif;
+    font-size: 2.2rem;
+    color: #b22222;
+    margin-bottom: 15px;
+}
+
+section p {
+    font-size: 1.2rem;
+    line-height: 1.8;
+}
+
+/* Links in den Sektionen */
+section a {
+    text-decoration: none;
+    color: #007acc;
+    font-size: 1.2rem;
+    transition: color 0.3s ease;
+}
+
+section a:hover {
+    color: #005999;
+    text-decoration: underline;
+}
+
+/* Kontraste für Sektionen erhöhen */
+section#veranstaltungen {
+    background-color: rgba(227, 242, 253, 0.9);
+}
+
+section#team {
+    background-color: rgba(241, 248, 233, 0.9);
+}
+
+section#mitmachen {
+    background-color: rgba(255, 253, 231, 0.9);
 }
 
 /* Call to Action (CTA) Section */
