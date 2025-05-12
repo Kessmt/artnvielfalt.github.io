@@ -6,21 +6,6 @@
     <title>ARTn'Vielfalt – Aufführung 'GRIMM!'</title>
     <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@700&family=Roboto:wght@400&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
-    <style>
-        /* Animation für den Scroll-Effekt */
-        @keyframes highlight {
-            0% {
-                background-color: #ffeb3b4d;
-            }
-            100% {
-                background-color: transparent;
-            }
-        }
-        
-        .highlight {
-            animation: highlight 1s ease-out;
-        }
-    </style>
 </head>
 <body>
    <header>
@@ -47,7 +32,7 @@
 
         <!-- Sektion für Veranstaltungen -->
         <section id="veranstaltungen" class="scroll-effect">
-            <a href="#veranstaltungen" class="scroll-link">
+            <a href="veranstaltungen.html">
                 <h2>Unsere Veranstaltungen</h2>
             </a>
             <p>Hier findest du unsere kommenden Events...</p>
@@ -55,7 +40,7 @@
 
         <!-- Sektion für das Team -->
         <section id="team" class="scroll-effect">
-            <a href="#team" class="scroll-link">
+            <a href="team.html">
                 <h2>Unser Team</h2>
             </a>
             <p>Triff die Menschen hinter den Kulissen...</p>
@@ -63,7 +48,7 @@
 
         <!-- Sektion für Mitmachen -->
         <section id="mitmachen" class="scroll-effect">
-            <a href="#mitmachen" class="scroll-link">
+            <a href="Mitmachen.html">
                 <h2>Mitmachen</h2>
             </a>
             <p>Erfahre, wie du Teil unserer Gemeinschaft werden kannst...</p>
@@ -79,28 +64,6 @@
             if (position < window.innerHeight) {
                 element.classList.add('visible');
             }
-        });
-    });
-
-    // JavaScript für sanftes Scrollen mit Animation
-    document.querySelectorAll('.scroll-link').forEach(link => {
-        link.addEventListener('click', function (e) {
-            e.preventDefault(); // Standard-Linkverhalten verhindern
-            const target = document.querySelector(this.getAttribute('href'));
-            const yOffset = -60; // Offset, damit es nicht direkt am Rand klebt (kannst du anpassen)
-            const yPosition = target.getBoundingClientRect().top + window.pageYOffset + yOffset;
-
-            // Sanftes Scrollen
-            window.scrollTo({
-                top: yPosition,
-                behavior: 'smooth'
-            });
-
-            // Highlight-Effekt
-            target.classList.add('highlight');
-            setTimeout(() => {
-                target.classList.remove('highlight');
-            }, 1000); // Effekt dauert 1 Sekunde
         });
     });
 </script>
