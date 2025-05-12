@@ -25,6 +25,11 @@ header {
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
 }
 
+/* Höhe der Navigationsleiste für Platzhalter (genau wie Header) */
+.header-space {
+    height: 80px; /* Höhe passend zum Header */
+}
+
 header img.logo {
     height: 60px;
     margin-bottom: 5px;
