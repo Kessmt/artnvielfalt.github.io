@@ -25,11 +25,12 @@ header {
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
 }
 
-/* Höhe der Navigationsleiste für Platzhalter (genau wie Header) */
+/* Header Platzhalter (verhindert Überlappen) */
 .header-space {
     height: 80px; /* Höhe passend zum Header */
 }
 
+/* Logo im Header */
 header img.logo {
     height: 60px;
     margin-bottom: 5px;
@@ -59,11 +60,6 @@ nav ul li a {
 nav ul li a:hover {
     background-color: rgba(178, 34, 34, 1);
     text-decoration: underline;
-}
-
-/* Platzhalter für den Sticky Header (verhindert Überlappen) */
-.header-space {
-    height: 80px; /* gleiche Höhe wie der Header */
 }
 
 /* Main Content */
@@ -103,11 +99,6 @@ section h2 {
     margin-bottom: 15px;
 }
 
-section p {
-    font-size: 1.2rem;
-    line-height: 1.8;
-}
-
 /* Links in den Sektionen */
 section a {
     text-decoration: none;
@@ -121,93 +112,8 @@ section a:hover {
     text-decoration: underline;
 }
 
-/* Kontraste für Sektionen erhöhen */
-section#veranstaltungen {
-    background-color: rgba(227, 242, 253, 0.9);
-}
-
-section#team {
-    background-color: rgba(241, 248, 233, 0.9);
-}
-
-section#mitmachen {
-    background-color: rgba(255, 253, 231, 0.9);
-}
-
-/* Call to Action (CTA) Section */
-.cta {
-    background-color: rgba(0, 0, 0, 0.5);
-    padding: 40px;
-    border-radius: 8px;
-    text-align: center;
-    margin-top: 40px;
-}
-
-.cta h2 {
-    font-family: 'Cinzel', serif;
-    font-size: 2.5rem;
-    color: #FF6347;
-}
-
-.cta p {
-    font-size: 1.4rem;
-    line-height: 1.6;
-    color: white;
-}
-
-.cta a {
-    text-decoration: none;
-    background-color: #FF6347;
-    padding: 15px 30px;
-    font-size: 1.2rem;
-    color: white;
-    border-radius: 5px;
-    font-weight: 600;
-    transition: background-color 0.3s ease, transform 0.3s ease;
-    margin-top: 20px;
-}
-
-.cta a:hover {
-    background-color: #ff4500;
-    transform: translateY(-5px);
-}
-
-/* Footer */
-footer {
-    background-color: #333333;
-    color: white;
-    text-align: center;
-    padding: 15px;
-    margin-top: 40px;
-}
-
-footer p {
-    margin: 0;
-    font-size: 1rem;
-}
-
 /* Responsive Design */
 @media (max-width: 768px) {
-    header h1 {
-        font-size: 2.5rem;
-    }
-
-    .cta h2 {
-        font-size: 2rem;
-    }
-
-    .cta a {
-        font-size: 1rem;
-    }
-
-    h2 {
-        font-size: 1.5rem;
-    }
-
-    p {
-        font-size: 1rem;
-    }
-
     nav ul {
         flex-direction: column;
         gap: 15px;
