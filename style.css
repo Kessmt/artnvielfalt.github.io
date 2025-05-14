@@ -32,7 +32,7 @@ header {
 
 /* Logo Styling */
 .logo {
-    height: 50px; /* Größe des Logos angepasst */
+    height: 20px; /* Größe des Logos angepasst */
     object-fit: contain;
 }
 
