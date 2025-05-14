@@ -20,9 +20,20 @@ header {
     top: 0;
     left: 0;
     z-index: 1000;
-    padding: 15px 0;
+    padding: 10px 0;
     font-family: 'Cinzel', serif;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+/* Logo Styling */
+.logo {
+    height: 50px; /* Größe des Logos angepasst */
+    object-fit: contain;
 }
 
 /* Header Platzhalter */
@@ -149,5 +160,9 @@ section a:hover {
 
     section h2 {
         font-size: 1.8rem;
+    }
+
+    .logo {
+        height: 40px;
     }
 }
